@@ -1,14 +1,14 @@
-#FAG Get user profile
+# FAG Get user profile
 Its an API which retrieves the profile of one Facebook user, using the Facebook API Graph
 
-#INSTALL:
+# INSTALL:
 Clone project:
 
 $ git clone https://github.com/sebasnob/fag-get-profile.git
 
 $ composer install
 
-#HOW TO USE:
+# HOW TO USE:
 Requests Examples:
 
 Get facebook profile from user '2013':
