@@ -11,6 +11,7 @@ $ git clone https://github.com/sebasnob/fag-get-profile.git
 Install dependencies
 
 ```
+$ cd fag-get-profile
 $ composer install
 ```
 
