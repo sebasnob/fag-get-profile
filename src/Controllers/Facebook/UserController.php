@@ -43,7 +43,8 @@ class UserController {
             $search = sprintf('%s?fields=id,first_name,last_name', $this->user);
             $data = $this->facebook->get($search);
             
-            return $data->getGraphUser();
+            //return $data->getGraphUser();
+            return trim(json_encode($data->getDecodedBody()));
             
         } catch (\Facebook\Exceptions\FacebookResponseException $e) {
             return json_encode($e->getMessage());
