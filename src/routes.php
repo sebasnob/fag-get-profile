@@ -12,8 +12,11 @@ $app->get('/', function (Request $request, Response $response, array $args) {
     return $this->renderer->render($response, 'index.phtml', $args);
 });
 
-$app->get('/facebook/users/[{search}]', function(Request $request){
-    $user = new UserController($this);
-    
-    echo $user->getProfile($request->getAttribute('search'));
+$app->group('/facebook/', function(){
+    //Return user profile data
+    $this->get('users/[{search}]', function(Request $request){
+        $user = new UserController($this);
+
+        echo $user->getProfile($request->getAttribute('search'));
+    });
 });
